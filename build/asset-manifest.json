@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/girvana-bharathi/static/css/main.602b066b.chunk.css",
+    "main.js": "/girvana-bharathi/static/js/main.be78443e.chunk.js",
+    "main.js.map": "/girvana-bharathi/static/js/main.be78443e.chunk.js.map",
+    "runtime-main.js": "/girvana-bharathi/static/js/runtime-main.6be1cd5b.js",
+    "runtime-main.js.map": "/girvana-bharathi/static/js/runtime-main.6be1cd5b.js.map",
+    "static/css/2.591db2b6.chunk.css": "/girvana-bharathi/static/css/2.591db2b6.chunk.css",
+    "static/js/2.f7d7c693.chunk.js": "/girvana-bharathi/static/js/2.f7d7c693.chunk.js",
+    "static/js/2.f7d7c693.chunk.js.map": "/girvana-bharathi/static/js/2.f7d7c693.chunk.js.map",
+    "static/js/3.a8b9ddca.chunk.js": "/girvana-bharathi/static/js/3.a8b9ddca.chunk.js",
+    "static/js/3.a8b9ddca.chunk.js.map": "/girvana-bharathi/static/js/3.a8b9ddca.chunk.js.map",
+    "index.html": "/girvana-bharathi/index.html",
+    "static/css/2.591db2b6.chunk.css.map": "/girvana-bharathi/static/css/2.591db2b6.chunk.css.map",
+    "static/css/main.602b066b.chunk.css.map": "/girvana-bharathi/static/css/main.602b066b.chunk.css.map",
+    "static/js/2.f7d7c693.chunk.js.LICENSE.txt": "/girvana-bharathi/static/js/2.f7d7c693.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/girvana-bharathi/static/media/gir_university_image_2.fc4f57de.jpg",
+    "static/media/gir_director_sir.10354dee.jpg": "/girvana-bharathi/static/media/gir_director_sir.10354dee.jpg",
+    "static/media/gir_footer_logo.16573f2e.svg": "/girvana-bharathi/static/media/gir_footer_logo.16573f2e.svg",
+    "static/media/gir_home_slider_image.b2b61fcb.jpg": "/girvana-bharathi/static/media/gir_home_slider_image.b2b61fcb.jpg",
+    "static/media/gir_world.313d4f31.png": "/girvana-bharathi/static/media/gir_world.313d4f31.png",
+    "static/media/logo.30cb641d.svg": "/girvana-bharathi/static/media/logo.30cb641d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6be1cd5b.js",
+    "static/css/2.591db2b6.chunk.css",
+    "static/js/2.f7d7c693.chunk.js",
+    "static/css/main.602b066b.chunk.css",
+    "static/js/main.be78443e.chunk.js"
+  ]
+}

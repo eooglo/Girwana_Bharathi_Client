@@ -1,0 +1,1929 @@
+// Homepage 
+
+.gir_page{
+
+    .gir_com_title{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 45px;
+        text-decoration-line: underline;
+        text-transform: capitalize;
+        color: var(--color-primary);
+        font-family: $font-Poppins-Medium;
+        text-align: center;
+        @include media_query("1375", "max") {
+            font-size: 24px;
+        }
+    }
+    p{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        font-family: $font-Poppins-Regular;
+        display: inline-block;
+        @include media_query("1375", "max") {
+            font-size: 14px;
+        }
+    }
+    .gir_mb_50{
+        margin-bottom: 50px;
+        @include media_query("1375", "max") {
+            margin-bottom: 20px;
+        }
+    }
+    .gir_banner_com{
+        background: url(../images/gir_page_banner.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 553px;
+        @include media_query("1375", "max") {
+            min-height: 350px;
+        }
+        @include media_query("769", "max") {
+            min-height: 250px;
+        }
+    }
+
+    &.gir_home{
+        .gir_banner{
+            background: url(../images/gir_homepage_banner.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            @include media_query("1375", "max") {
+                min-height: 300px;
+            }
+            @include media_query("400", "max"){
+                min-height: 200px;
+            }
+            .gir_banner_item{
+                padding-left: 20%;
+                @include media_query("769", "max"){
+                    padding-left: 0;
+                }
+                .gir_title{
+                    font-size: 50px;
+                    line-height: 75px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    font-family: $font-Poppins-Bold;
+                    @include media_query("769", "max"){
+                        font-size: 35px;
+                        line-height: 35px;
+                    }
+                    @include media_query("400", "max"){
+                        font-size: 26px;
+                        line-height: 30px;
+                    }
+                }
+                .gir_sub_title{
+                    font-size: 30px;
+                    line-height: 45px;
+                    text-transform: uppercase;
+                    font-family: $font-Poppins-Regular;
+                    color: #FFFFFF;
+                    @include media_query("769", "max"){
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .gir_home_slider{
+            .gir_slider{
+                min-height: 450px;
+                @include media_query("1375", "max") {
+                    padding: 0 0px;
+                    margin-bottom: 30px;
+                    min-height: auto;
+                }
+                @include media_query("769", "max"){
+                    padding: 0 0px;
+                }
+                .owl-nav{
+                    position: absolute;
+                    top: 30%;
+                    width: 100%;
+                    @include media_query("769", "max"){
+                        top: 36%;
+                    }
+                    button{
+                        background: rgba(231, 120, 23, 0.75);
+                        border-radius: 10px;
+                        width: 52px;
+                        height: 154px;
+                        position: absolute;
+                        transition: .5s;
+                        @include media_query("1025", "max"){
+                            height: 100px;
+                        }
+                        @include media_query("769", "max"){
+                            height: 50px;
+                            width: 30px;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            height: 31px;
+                            width: 20px;
+                            margin: 0 auto;
+                            background: url(../images/gir_sprites.svg) -7px -402px/33px no-repeat;
+                            @include media_query("769", "max"){
+                                transform: translate(-50%, -50%) scale(0.5);
+                            }
+                        }
+                        &:hover{
+                            background: var(--color-primary);;
+                        }
+                        span{
+                            font-size: 0;
+                        }
+                        &.owl-prev{
+                            left: -26px;
+                            @include media_query("769", "max"){
+                                left: -16px;
+                            }
+                        }
+                        &.owl-next{
+                            right: -26px;
+                            @include media_query("769", "max"){
+                                right: -16px;
+                            }
+                            &::after{
+                                background: url(../images/gir_sprites.svg) -7px -470px/33px no-repeat;
+                                @include media_query("769", "max"){
+                                   margin-top: -3px;
+                                }
+                            }
+                        }
+                    }
+                }
+              
+            }
+        }
+        .gir_home_about{
+            margin-bottom: 50px;
+            .gir_about_block{   
+                p{
+                    #gir_more{
+                        display: none;
+                        padding-right: 10px;
+                    }
+                    #gir_Btn{
+                     color: var(--color-primary);
+                     text-transform: capitalize;
+                     font-size: 18px;
+                    }
+                }
+            }
+        }
+        .gir_home_events{
+            margin-bottom: 50px;
+            .gir_warpper{
+                @include flexbox();
+                @include media_query("1025", "max"){
+                    @include display(block);
+                }
+                .gir_events{
+                    flex-basis: 70%;
+                    @include media_query("1025", "max"){
+                        margin-bottom: 20px;
+                    }
+                    #gir_events_tab {
+                        min-height: 400px;
+                        border-radius: 4px;
+                        display: flex;
+                        @include media_query("769", "max"){
+                            display: block;
+                            min-height: auto;
+                        }
+                    }
+                        
+                    #gir_events_tab_block {
+                        list-style: none;
+                        display: block;
+                        min-width: 230px;
+                        @include media_query("769", "max"){
+                            display: flex;
+                        }
+                    
+                        li {
+                            min-height: 72px;
+                            width: 100%;
+                            text-align: center;
+                            cursor: pointer;
+                            transition: background-color 0.25s;
+                            background: #FFFFFF;
+                            font-weight: bold;
+                            font-size: 18px;
+                            line-height: 27px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-transform: uppercase;
+                            color: #000000; 
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            border-right: none;
+                            @include media_query("769", "max"){
+                                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                            }
+                            @include media_query("400", "max"){
+                                font-size: 16px;
+                                min-height: 50px;
+                            }
+                    
+                            &:hover {
+                                transition: background-color 0.25s;
+                                color: white;
+                                background: var(--color-primary);
+                                border: 1px solid var(--color-primary);
+                            }
+                            &.react-tabs__tab--selected {
+                                color: white;
+                                background: var(--color-primary);
+                                pointer-events: none;
+                                border: 1px solid var(--color-primary);
+                            }
+                        }
+                    
+                        
+                    }
+                    
+                    .gir_tab_body{
+                        border: 1px solid rgba(231, 120, 23, 0.55);
+                        .react-tabs__tab-panel {
+                            padding: 15px;
+                            .gir_content_item{
+                                .gir_item{
+                                    border-bottom: 1px solid #9B9B9B;
+                                    padding: 10px;
+                                    p{
+                                        font-weight: 500;
+                                        font-size: 14px;
+                                        line-height: 21px;
+                                        color: #000000; 
+                                    }
+                                }
+                            }
+                        }
+                        h2 {
+                            margin-bottom: 0.5em;
+                            font-weight: 700;
+                        }
+                        p {
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 21px;
+                            color: #000000;     
+                        }
+                    }
+                }
+                .gir_ad{
+                    flex-basis: 30%;
+                    .gir_ad_link {
+                        margin-left: 50px;
+                        height: 100%;
+                        @include media_query("1025", "max"){
+                            margin-left: 0;
+                            height: 300px;
+                        }
+                        a{
+                            border: 1px solid rgba(231, 120, 23, 0.55);
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            font-weight: 600;
+                            font-size: 55px;
+                            line-height: 82px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-transform: capitalize;
+                            color: #000000;
+                            img{
+
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        .gir_home_director{
+            margin-bottom: 50px;
+            .gir_wrapper{
+                @include flexbox();
+                @include media_query("1025", "max"){
+                    @include display(block);
+                }
+                border: 1px solid var(--color-primary);
+                .gir_dir{
+                    @include flex-basis(40%);
+                    @include media_query("1025", "max"){
+                        text-align: center;
+                    }
+                }
+                .gir_dir_content{
+                    @include flex-basis(60%);
+                    @include flexbox();
+                    @include align-items(center);
+                    padding: 0 20px;
+                    p{
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 18px;
+                        display: flex;
+                        align-items: center;
+                        text-align: justify;
+                        color: #000000;
+                        @include media_query("1025", "max"){
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.gir_about{
+        .gir_about_content{
+            #gir_content{
+                h2{
+                    margin-bottom: 15px;
+                    text-align: left;
+                }
+                p{
+                    margin-bottom: 20px;
+                }
+                ul{
+                    padding: 0 0 20px 0;
+                    li{
+                        font-size: 16px;
+                    }
+                }
+                button{
+                    &.gir_gen_read{
+                        font-weight: 500;
+                        font-size: 30px;
+                        line-height: 45px;
+                        margin: 30px  auto;
+                        text-transform: capitalize;
+                        color: var(--color-primary);
+                        position: relative;
+                        display: inherit;
+                        padding-right: 32px;
+                        border-bottom: 1px solid var(--color-primary);
+                        @include media_query("769", "max") {
+                         font-size: 18px;
+                        }
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            top: 10px;
+                            right: 0;
+                            height: 30px;
+                            width: 26px;
+                            background: url(../images/gir_sprites.svg) -6px -134px/38px no-repeat;
+                            @include media_query("769", "max") {
+                                transform: scale(.8);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.gir_director{
+        .gir_director-content{
+            .gir_com_title{
+                text-align: left;
+                margin-bottom: 30px;
+            }
+            .gir_wrapper{
+                @include flexbox();
+                border: 1px solid var(--color-primary);
+                max-height: 452px;
+                overflow: hidden;
+                @include media_query("1025", "max") {
+                    display: block;
+                    max-height: 100%;
+                }
+                .gir_dir{
+                    @include flex-basis(40%);
+                }
+                .gir_dir_content{
+                    @include flex-basis(60%);
+                    padding: 30px;
+                    @include media_query("1025", "max") {
+                        padding-left: 10px;
+                    }
+                    h2{
+                        font-weight: 500;
+                        font-size: 22px;
+                        line-height: 33px;
+                        text-transform: capitalize;
+                        color: #000000;
+                        margin-bottom: 20px;
+                        font-family: $font-Poppins-Medium;
+                    }
+                    h5{
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 33px;
+                        text-transform: capitalize;
+                        color: #000000;
+                    }
+                    p{
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 18px;
+                        text-align: justify;
+                        text-transform: capitalize;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.gir_infra{
+        .gir_infra_title{
+            .gir_com_title{
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            p{
+                font-weight: 500;
+                font-size: 18px;
+                text-align: justify;
+                @include media_query("769", "max") {
+                    font-size: 14px;
+                }
+            }
+        }
+        .gir_infra_school{
+            margin-bottom: 50px;
+            .gir_wrapper{
+                @include flexbox();
+                @include media_query("769", "max") {
+                    display: block;
+                }
+                .gir_infra_com{
+                    @include flex-basis(50%);
+                    .gir_infra_block{
+                        position: relative;
+                        overflow: hidden;
+                        .gir_infra_img{
+                            background: url(../images/gir_university_image_1.jpg) no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            min-height: 426px;
+                            .gir_infra_content{
+                                background: rgba(0, 0, 0, 0.5);
+                                width: 100%;
+                                height: 58px;
+                                font-weight: 800;
+                                font-size: 24px;
+                                line-height: 40px;
+                                text-transform: capitalize;
+                                color: #FFFFFF;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                font-family: $font-Poppins-Bold;
+                                @include flexbox();
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                    &.gir_infra_left{
+                        .gir_infra_block{
+                            margin-bottom: 46px;
+                        }   
+                    }
+                    &.gir_infra_right{
+                        .gir_infra_block{
+                            margin-left: 46px;
+                            @include media_query("769", "max") {
+                                margin-left: 0;
+                            }
+                            .gir_infra_img{
+                                background: url(../images/gir_university_image_2.jpg) no-repeat;
+                                background-size: cover;
+                                background-position: center;
+                                min-height: 898px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.gir_signup{
+        .gir_signup_block{
+            padding: 100px 0;
+            @include media_query("769", "max") {
+                padding: 50px 0;
+            }
+            .gir_signup_form{
+                h2{
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 45px;
+                    text-align: justify;
+                    text-decoration-line: underline;
+                    text-transform: capitalize;
+                    color: var(--color-primary);
+                    text-align: center;
+                    margin-bottom: 50px;
+                    @include media_query("769", "max") {
+                        margin-bottom: 20px;
+                    }
+                }
+                form{
+                    .gir_fx{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        @include media_query("769", "max") {
+                            display: block
+                        }
+                        .gir_input{
+                            flex-basis: 46%;
+                            @include media_query("769", "max") {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .gir_input{
+                        input{
+                            background: #FFFFFF;
+                            border: 1px solid var(--color-primary);
+                            box-sizing: border-box;
+                            padding: 10px 20px;
+                            color: #969490;
+                            font-size: 24px;
+                            line-height: 39px;
+                            font-weight: 500;
+                            height: 74px;
+                            width: 100%;
+                            margin-bottom: 40px;
+                            @include media_query("769", "max") {
+                                height: 50px;
+                                font-size: 18px;
+                                margin-bottom: 10px;
+                            }
+                            &::placeholder{
+                                font-weight: 500;
+                                font-size: 26px;
+                                line-height: 39px;
+                                text-transform: capitalize;
+                                color: #969490;
+                                @include media_query("769", "max") {
+                                    font-size: 18px;
+                                }
+                            }
+                            &:focus{
+                                outline: none;
+                                box-shadow: var(--shadow-small);
+                            }
+                        }
+                    }
+                    .gir_terms{
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+                        display: flex;
+                        text-transform: capitalize;
+                        color: #969490; 
+                        @include media_query("769", "max") {
+                            display: block;
+                            margin:  10px 0;
+                            font-size: 14px;
+                        }
+                        a{
+                            color: var(--color-primary);
+                            padding-left: 5px;
+                        }
+                    }
+                    .gir_form_btn{
+                        background: var(--color-primary);
+                        width: 279px;
+                        height: 74px;
+                        font-weight: bold;
+                        font-size: 26px;
+                        line-height: 39px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: capitalize;
+                        color: #FFFFFF; 
+                        @include media_query("769", "max") {
+                            width: 220px;
+                            height: 60px;
+                        }
+                    }
+                }
+                .gir_other_login{
+                    .gir_or{
+                        position: relative;
+                        text-align: center;
+                        margin: 40px 0;
+                        @include media_query("769", "max") {
+                            margin:20px 0;
+                        }
+                        span{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 24px;
+                            display: inline-block;
+                            text-transform: capitalize;
+                            color: #969490;
+                            background: #FFFFFF;
+                            z-index: 9;
+                            position: relative;
+                            padding: 0 15px;
+                        }
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 100%;
+                            height: 1px;
+                            background:#000000;
+                        }
+                    }
+                    .gir_fb_go{
+                        display: flex;
+                        justify-content: space-between;
+                        @include media_query("769", "max") {
+                            display: block;
+                        }
+                        .gir_so{
+                            width: 330px;
+                            height: 74px;
+                            background: #4478FF;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: 600;
+                            font-size: 20px;
+                            line-height: 39px;
+                            text-transform: capitalize;
+                            color: #FFFFFF;
+                            @include media_query("769", "max") {
+                                width: 100%;
+                                height: 60px;
+                                margin: 10px 0;
+                            }
+                            span{
+                                width: 44px;
+                                height: 44px;
+                                margin-right: 0px;
+                                background: url(../images/gir_sprites.svg) -5px -458px/54px no-repeat;
+                                transform: scale(0.6);
+                            }
+                            &.gir_go{
+                                background: #F2F2F2;
+                                color: #000000;
+                                span{
+                                    background: url(../images/gir_sprites.svg) -5px -878px/54px no-repeat;
+                                }
+                            }
+                        }
+                    }
+                    .gir_log{   
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 30px;
+                        text-align: center;
+                        text-transform: capitalize;
+                        color: #969490; 
+                        margin-top: 40px;
+                        @include media_query("769", "max") {
+                            font-size: 14px
+                        }
+                        a{
+                            color: var(--color-primary);
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.gir_news{
+        .gir_news-block{
+            padding: 20px 0 70px 0;
+            .gir_news_head{
+                h2{
+                    margin-bottom: 40px;
+                    @include media_query("769", "max") {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .gir_news_search{
+                margin-bottom: 60px;
+                @include media_query("769", "max") {
+                    margin-bottom: 20px;
+                }
+                form{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items:  flex-end;
+                    @include media_query("769", "max") {
+                        display: block;
+                    }
+                    .gir_in_com{
+                        padding-right: 50px;
+                        @include media_query("769", "max") {
+                            padding-right: 0;
+                        }
+                        label{
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 27px;
+                            text-transform: capitalize;
+                            color: #000000;
+                        }
+                        input{
+                            background: #FFFFFF;
+                            border: 1px solid var(--color-primary);
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 54px;
+                            padding: 10px 20px;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #969490;
+                            margin-top: 20px;
+                            @include media_query("769", "max") {
+                                margin: 10px 0 20px 0;
+                            }
+                            &::placeholder{
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #969490;
+                            }
+                            &:focus{
+                                outline: none;
+                                box-shadow: var(--shadow-small);
+                            }
+                        }
+                        &.gir_news_input_search{
+                            flex-basis: 50%;
+                        }
+                        &.gir_news_input_date{
+                            flex-basis:30%;
+                        }
+                        &.gir_news_submit{
+                            flex-basis: 20%;
+                            padding-right: 0;
+                            background: var(--color-primary);
+                            border: 1px solid var(--color-primary);
+                            box-sizing: border-box;
+                            height: 54px;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 30px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-transform: capitalize;
+                            color: #FFFFFF;
+                            @include media_query("769", "max") {
+                                display: block;
+                                width: 220px;
+                            }
+                        }   
+                    }    
+                }
+            }
+            .gir_news_content{
+                .gir_news_title{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    @include media_query("769", "max") {
+                        display: block;
+                    }
+                    .gir_title_com{
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 36px;
+                        text-transform: capitalize;
+                        color: var(--color-primary);
+                        &.gir_date{
+                            flex-basis: 15%;
+                        }
+                        &.gir_title{
+                            flex-basis: 65%;
+                            padding-left: 20px;
+                            @include media_query("769", "max") {
+                                padding-left: 0;
+                            }
+                        }
+                        &.gir_posted{
+                            flex-basis: 20%;
+                            padding-left: 20px;
+                            @include media_query("769", "max") {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+                .gir_news_body{
+                    border: 1px solid var(--color-primary);
+                    padding: 10px;
+                    .gir_news_body_item{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 20px;
+                        @include media_query("769", "max") {
+                            display: block;
+                            padding: 10px 10px 20px 10px;
+                        }
+                        .gir_body_com{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 24px;
+                            text-transform: capitalize;
+                            color: #000000;
+                            &.gir_date{
+                                flex-basis: 15%;
+                            }
+                            &.gir_title{
+                                flex-basis: 65%;
+                            }
+                            &.gir_posted{
+                                flex-basis: 20%;
+                                justify-content: center;
+                                display: flex;
+                                @include media_query("769", "max") {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    &.gir_contact{
+        .gir_contact_block{
+            padding: 20px 0 70px 0;
+            @include media_query("769", "max") {
+                padding: 20px 0 20px 0;
+            }
+            .gir_contact_head{
+                margin-bottom: 50px;
+                @include media_query("769", "max") {
+                    margin-bottom: 20px;
+                }
+                h2{
+                    margin-bottom: 40px;
+                    text-align: left;
+                    @include media_query("769", "max") {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .gir_map_block{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 50px;
+                @include media_query("769", "max") {
+                    margin-bottom: 20px;
+                    display: block;
+                }
+                .gir_map{
+                    flex-basis: 45%;
+                    padding: 0 40px 0 0;
+                    @include media_query("769", "max") {
+                        padding: 0;
+                    }
+                    iframe {
+                        width: 100%;
+                        height: 344px;
+                        border: 1px solid var(--color-primary);
+                    }
+                }
+                .gir_map_content{
+                    flex-basis: 55%;
+                    border-left: 1px solid var(--color-primary);
+                    padding-left: 20px;
+                    @include media_query("769", "max") {
+                        padding: 0;
+                        border: none;
+                    }
+                    h2{
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 45px;
+                        text-align: left;
+                        text-transform: capitalize;
+                        color: #000000;
+                        margin-bottom: 40px;
+                        @include media_query("769", "max") {
+                            margin-bottom: 20px;        
+                        }
+                    }
+                    p{
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-align: justify;
+                        text-transform: capitalize;
+                        color: #000000;
+                    }
+
+                }
+            }
+            .gir_contact_form{
+                margin-bottom: 80px;
+                h2{
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 36px;
+                    text-decoration-line: underline;
+                    text-transform: capitalize;
+                    color: var(--color-primary);
+                    margin-bottom: 20px;
+                }
+                form{
+                    .gir_fx{
+                        display: flex;
+                        justify-content: space-between;
+                        @include media_query("769", "max") {
+                            display: block;
+                        }
+                        .gir_contact_input{
+                            input,textarea{
+                                background: #FFFFFF;
+                                border: 1px solid var(--color-primary);
+                                box-sizing: border-box;
+                                width: 100%;
+                                height: 54px;
+                                padding: 10px 20px;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #969490;
+                                margin-bottom: 20px;
+                                &::placeholder{
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    color: #969490;
+                                }
+                                &:focus{
+                                    outline: none;
+                                    box-shadow: var(--shadow-small);
+                                }
+                            }
+                        }
+                        .gir_contact_left{
+                            flex-basis: 50%; 
+                            margin-right: 20px;
+                            @include media_query("769", "max") {
+                                margin-right: 0;
+                            }   
+                        }
+                        .gir_contact_right{
+                            flex-basis: 50%;  
+                            textarea{
+                                height: 278px;
+                                margin: 0;
+                                @include media_query("769", "max") {
+                                    height: 100px;
+                                }   
+                            }  
+                        }      
+                    }
+                    .gir_contact_submit{
+                        background: var(--color-primary);
+                        width: 245px;
+                        height: 64px;
+                        font-weight: bold;
+                        font-size: 26px;
+                        line-height: 39px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: capitalize;
+                        color: #FFFFFF;
+                        margin: 20px auto;
+                    }
+                }
+            }
+            .gir_address{
+                margin-bottom: 50px;
+                p{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: justify;
+                    text-transform: capitalize;
+                    color: #000000;
+                
+                    b{
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 36px;
+                        text-align: justify;
+                        text-transform: capitalize;
+                        color: var(--color-primary);
+                        border-right: 1px solid var(--color-primary);
+                        padding: 20px;
+                        margin-right: 20px;
+                        font-family: $font-Poppins-Medium;
+                        @include media_query("769", "max") {
+                            margin: 0 0 20px 0;
+                            padding: 0;
+                            display: block;
+                            border: none;
+                        }  
+                    }
+                }
+            }
+        }
+    }
+
+    &.gir_achieve{
+        .gir_achieve_head{
+            margin: 70px 0;
+            @include media_query("769", "max") {
+                margin: 20px 0;     
+            }
+            h2{
+                text-align: left;
+            }
+            p{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+                text-transform: capitalize;
+                color: #000000;
+                a{
+                    color: #0063AA;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+
+    &.gir_donate{
+        .gir_donate_head{
+            margin: 20px 0 40px 0;
+        }
+        .gir_donate_tabs{
+                .gir_donate_tab_block{
+                    #gir_donate_tab_item {
+                        min-height: auto;
+                    } 
+                    #gir_donate_tab_item_ul {
+                        list-style: none;
+                        display: flex;
+                        min-width: 230px;
+                    
+                        li {
+                            min-height: 72px;
+                            width: 400px;
+                            text-align: center;
+                            cursor: pointer;
+                            transition: background-color 0.25s;
+                            background: #FFFFFF;
+                            font-weight: bold;
+                            font-size: 18px;
+                            line-height: 27px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-transform: uppercase;
+                            color: #000000; 
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                    
+                            &:hover {
+                                transition: background-color 0.25s;
+                                color: white;
+                                background: var(--color-primary);
+                                border: 1px solid var(--color-primary);
+                            }
+                            &.react-tabs__tab--selected{
+                                color: white;
+                                background: var(--color-primary);
+                                pointer-events: none;
+                                border: 1px solid var(--color-primary);
+                            }
+                        }
+                    }
+                    
+                    #gir_donate_tab_body{
+                        border: 1px solid rgba(231, 120, 23, 0.55);
+                        background: #FCFAFA;
+                        .react-tabs__tab-panel {
+                            // display: none;   
+                            padding: 15px;
+                            
+                            .gir_donate_content_item{
+                                display: flex;
+                                justify-content: space-evenly;
+                                padding: 50px 20px 20px 20px;
+                                @include media_query("1375", "max") {
+                                    padding: 20px;
+                                    display: block;
+                                }
+                                .gir_item{
+                                    flex-basis: 40%;
+                                    @include media_query("1375", "max") {
+                                        margin-bottom: 20px;
+                                    }
+                                    h2{
+                                        font-weight: 500;
+                                        font-size: 20px;
+                                        line-height: 30px;
+                                        text-align: justify;
+                                        text-decoration-line: underline;
+                                        text-transform: capitalize;
+                                        color: #969490;
+                                        margin-bottom: 20px;
+                                    }
+                                    .gir_bank{
+                                        padding: 50px;
+                                        background: #FFFFFF;
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        text-transform: capitalize;
+                                        color: #000000;
+                                    }
+                                }
+
+                            }
+
+                            .gir_check_out{
+                                width: 80%;
+                                margin: 0 auto;
+                                padding: 50px 0;
+                                @include media_query("1375", "max") {
+                                    padding: 20px 0;  
+                                    width: 95%;
+                                }
+                                .gir_check_out_head{
+                                    margin-bottom: 40px;
+                                    ul{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        li{
+                                            font-weight: normal;
+                                            font-size: 18px;
+                                            line-height: 27px;
+                                            text-transform: capitalize;
+                                            color: #919090;
+                                            flex-basis: 15%;
+                                            text-align: center;
+                                            &:nth-child(1){
+                                                font-weight: normal;
+                                                font-size: 18px;
+                                                line-height: 27px;
+                                                text-transform: capitalize;
+                                                color: #000000;
+                                                flex-basis: 18%;
+                                                text-align: left;
+                                            }
+                                            &:nth-child(2){
+                                                flex-basis: 38%;
+                                                text-align: left;
+                                                select{
+                                                    background: #FFFFFF;
+                                                    border: 1px solid var(--color-primary);
+                                                    box-sizing: border-box;
+                                                    width: 112px;
+                                                    height: 40px;
+                                                    font-size: 18px;
+                                                    line-height: 27px;
+                                                    text-transform: capitalize;
+                                                    color: #919090;
+                                                    padding: 0 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .gir_check_out_list{
+                                    .gir_check_out_list_item{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        padding: 20px 0;
+                                        border-bottom: 1px solid #CCCCCC;
+                                        .gir_check_out_img{
+                                            flex-basis: 18%;
+                                        }
+                                        .gir_check_out_content{
+                                            flex-basis: 38%;
+                                            h2{
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 16px;
+                                                line-height: 24px;
+                                                text-transform: capitalize;
+                                                color: #000000;
+                                                margin-bottom: 10px;
+                                                width: 80%;
+                                            }
+                                            a{
+                                                font-weight: normal;
+                                                font-size: 14px;
+                                                line-height: 21px;
+                                                text-transform: capitalize;
+                                                color: var(--color-primary);
+                                            }
+                                            .gir_check_out_btn{
+                                                span{
+                                                    font-weight: normal;
+                                                    font-size: 18px;
+                                                    line-height: 27px;
+                                                    text-transform: capitalize;
+                                                    color: #FFFFFF;
+                                                    padding: 10px 20px;
+                                                    margin-top: 30px;
+                                                    background: var(--color-primary);
+                                                    display: inline-block;
+                                                }
+                                            }
+                                        }
+                                        .gir_check_out_cost{
+                                            font-weight: normal;
+                                            font-size: 16px;
+                                            line-height: 24px;
+                                            text-transform: capitalize;
+                                            color: #000000;
+                                            flex-basis: 15%;
+                                            justify-content: center;
+                                            display: flex;
+                                            height: 40px;
+                                            align-items: center;
+                                        }
+                                        .gir_check_out_unit{
+                                            flex-basis: 15%;
+                                            justify-content: center;
+                                            display: flex;
+                                            input{
+                                                background: #FFFFFF;
+                                                border: 1px solid var(--color-primary);
+                                                box-sizing: border-box;
+                                                width: 112px;
+                                                height: 40px;
+                                                font-weight: normal;
+                                                font-size: 20px;
+                                                line-height: 30px;
+                                                text-transform: capitalize;
+                                                color: #000000;
+                                                text-align: center;
+
+                                            }
+                                        }
+                                        .gir_check_out_amt{
+                                            font-weight: normal;
+                                            font-size: 16px;
+                                            line-height: 24px;
+                                            text-transform: capitalize;
+                                            color: var(--color-primary);
+                                            flex-basis: 15%;
+                                            justify-content: center;
+                                            display: flex;
+                                            height: 40px;
+                                            align-items: center;
+                                        }
+
+                                    }
+                                    .gir_total{    
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-end;
+                                        .gir_total_amt{
+                                            display: flex;
+                                            padding: 15px 0;
+                                            .gir_total_text{
+                                                font-weight: normal;
+                                                font-size: 24px;
+                                                line-height: 36px;
+                                                color: #000000;
+                                                padding-right: 20px;
+                                            }
+                                            .gir_total_cost{
+                                                font-weight: normal;
+                                                font-size: 24px;
+                                                line-height: 36px;
+                                                color: var(--color-primary);
+                                            }
+                                        }
+                                        .gir_total_submit{
+                                            margin-bottom: 30px;
+                                            button{
+                                                background: var(--color-primary);
+                                                width: 230px;
+                                                height: 74px;
+                                                font-weight: 600;
+                                                font-size: 26px;
+                                                line-height: 39px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                color: #FFFFFF;     
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .gir_donate_content_active {
+                            display: block;
+                        }
+                    }
+                }
+        }
+        .gir_policy{
+            margin-bottom: 30px;
+            h2{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 36px;
+                text-transform: capitalize;
+                color: var(--color-primary);
+                margin-bottom: 20px;
+            }
+            p{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                text-align: justify;
+                text-transform: capitalize;
+                color: #000000;
+            }
+        }
+    }
+
+    &.gir_search_pg{
+        .gir_search_head{
+            background: rgba(231, 120, 23, 0.1);
+            padding: 50px 0;
+            .gir_search_img{
+                margin: 0 auto 50px auto;
+                display: flex;
+                justify-content: center;
+                img{
+
+                }
+            }
+            .gir_search_form{
+                display: flex;
+                justify-content: center;
+
+                input{
+                    background: transparent;
+                    border: 1px solid var(--color-primary);
+                    box-sizing: border-box;
+                    padding: 10px 20px;
+                    color: #969490;
+                    font-size: 24px;
+                    line-height: 39px;
+                    font-weight: 500;
+                    height: 64px;
+                    width: 440px;
+                    margin-bottom: 40px;
+                    @include media_query("769", "max") {
+                        width: 200px;
+                    }
+                    &::placeholder{
+                        font-weight: 500;
+                        font-size: 26px;
+                        line-height: 39px;
+                        text-transform: capitalize;
+                        color: #969490;
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: var(--shadow-small);
+                    }
+                }
+                button{
+                    background: var(--color-primary);
+                    width: 90px;
+                    height: 64px;
+                    position: relative;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        height: 25px;
+                        width: 25px;
+                        margin: 0 auto;
+                        background: url(../images/gir_sprites.svg) -6px -688px/38px no-repeat;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+        .gir_doc_slider{
+            padding: 30px 0 0;  
+            @include media_query("1375", "max") {
+                padding: 30px;
+            }
+            .gir_slider{
+                min-height:auto;
+                padding-bottom: 40px;
+                border-bottom: 1px solid #B2B2B2;  
+                margin-bottom: 20px;
+                h2{
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 36px;
+                    text-transform: capitalize;
+                    color: var(--color-primary);
+                    margin-bottom: 30px;
+                }
+                .owl-nav{
+                    position: absolute;
+                    top: 30%;
+                    width: 100%;
+                    button{
+                        background: rgba(231, 120, 23, 0.75);
+                        border-radius: 10px;
+                        width: 52px;
+                        height: 154px;
+                        position: absolute;
+                        transition: .5s;
+                        @include media_query("769","max"){
+                            width: 30px;
+                            height: 50px;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            height: 31px;
+                            width: 20px;
+                            margin: 0 auto;
+                            background: url(../images/gir_sprites.svg) -7px -402px/33px no-repeat;
+                            @include media_query("769","max"){
+                                transform: translate(-50%, -50%) scale(0.6);
+                            }
+                        }
+                        &:hover{
+                            background: var(--color-primary);;
+                        }
+                        span{
+                            font-size: 0;
+                        }
+                        &.owl-prev{
+                            left: -26px;
+                        }
+                        &.owl-next{
+                            right: -26px;
+                            &::after{
+                                background: url(../images/gir_sprites.svg) -7px -470px/33px no-repeat;
+                            }
+                        }
+                    }
+                }
+               
+                .gir_slider_item{
+                    #gir_content{
+                        p{
+                            font-size: 14px;
+                            line-height: 21px;
+                            text-align: justify;
+                            text-transform: capitalize;
+                            color: #000000;
+                            padding: 10px 0;
+                        }
+                        a{
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 21px;
+                            text-transform: capitalize;
+                            color: var(--color-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.gir_docum{
+        .gir_docum_head{
+            padding: 20px 0;
+            .gir_search_form{
+                display: flex;
+                justify-content: flex-end;
+
+                input{
+                    background: transparent;
+                    border: 1px solid var(--color-primary);
+                    box-sizing: border-box;
+                    padding: 10px 20px;
+                    color: #969490;
+                    font-size: 24px;
+                    line-height: 39px;
+                    font-weight: 500;
+                    height: 64px;
+                    width: 440px;
+                    margin-bottom: 40px;
+                    @include media_query("769", "max") {
+                        width: 200px;
+                    }
+                    &::placeholder{
+                        font-weight: 500;
+                        font-size: 26px;
+                        line-height: 39px;
+                        text-transform: capitalize;
+                        color: #969490;
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: var(--shadow-small);
+                    }
+                }
+                button{
+                    background: var(--color-primary);
+                    width: 90px;
+                    height: 64px;
+                    position: relative;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        height: 25px;
+                        width: 25px;
+                        margin: 0 auto;
+                        background: url(../images/gir_sprites.svg) -6px -688px/38px no-repeat;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+        .gir_per_detail{
+            .gir_per_block{
+                display: flex;
+                align-items: center;
+                @include media_query("769", "max") {
+                    display: block;
+                }
+                .gir_per_img{
+
+                }
+                .gir_per_content{
+                    padding-left: 30px;
+                    @include media_query("769", "max") {
+                        padding-left: 0;
+                    }
+
+                    h2{
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 36px;
+                        text-transform: capitalize;
+                        color: var(--color-primary); 
+                        margin-bottom: 20px;
+                        font-family: $font-Poppins-Bold;
+                    }
+                    h4{
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 27px;
+                        text-transform: capitalize;
+                        color: #000000;
+                        margin-bottom: 20px;
+                        padding-left: 25px;
+                        position: relative;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            top: 4px;
+                            left: 0;
+                            height: 20px;
+                            width: 20px;
+                            margin: 0 auto;
+                            background: url(../images/gir_sprites.svg) -7px -685px/34px no-repeat;
+                            z-index: 1;
+                        }
+                    }
+                    ul{
+                        &.gir_list{
+                            display: flex;
+                            margin-bottom: 20px;
+                            @include media_query("769", "max") {
+                                display: block;
+                            }
+                            li{
+                                font-weight: normal;
+                                font-size: 16px;
+                                line-height: 24px;
+                                text-transform: capitalize;
+                                color: #919090;
+                                padding: 0 10px;
+                                border-right: 1px solid rgba(242, 131, 91, 0.6);
+                                @include media_query("769", "max") {
+                                  border: none;
+                                  padding: 10px 0;
+                                }
+                                &:first-child{
+                                    padding-left: 0;
+                                }
+                                &:last-child{
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                    ul{
+                        &.gir_button_list{
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 20px;
+                            @include media_query("769", "max") {
+                                display: block;
+                            }
+                            li{
+                                @include media_query("769", "max") {    
+                                    margin: 20px 0;
+                                }
+                                a{
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    text-transform: capitalize;
+                                    color: #919090;
+                                    padding: 0 10px;
+                                    position: relative;
+                                }
+                                
+                                &:first-child{
+                                    margin-right: 10px;
+                                    a{
+                                        background: var(--color-primary);
+                                        width: 230px;
+                                        height: 50px;
+                                        font-weight: 600;
+                                        font-size: 26px;
+                                        line-height: 39px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        text-transform: uppercase;
+                                        color: #FFFFFF;
+                                        @include media_query("769", "max") {
+                                            width: 100px;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                                &:nth-child(2){
+                                    a{
+                                        padding-left: 30px;
+                                        border-left: 1px solid rgba(242, 131, 91, 0.6);
+                                        @include media_query("769", "max") {
+                                          border: none;
+                                        }
+                                        &:after{
+                                            content: '';
+                                            position: absolute;
+                                            top: 1px;
+                                            left: 5px;
+                                            height: 20px;
+                                            width: 20px;
+                                            margin: 0 auto;
+                                            background: url(../images/gir_sprites.svg) -7px -793px/34px no-repeat;
+                                            z-index: 1;
+                                        }
+                                    }
+                                }
+                                &:last-child{ 
+                                    a{
+                                        padding-left: 30px;
+                                        border-left: 1px solid rgba(242, 131, 91, 0.6);
+                                        @include media_query("769", "max") {
+                                          border: none;
+                                        }
+                                        &:after{
+                                            content: '';
+                                            position: absolute;
+                                            top: 1px;
+                                            left: 5px;
+                                            height: 20px;
+                                            width: 20px;
+                                            margin: 0 auto;
+                                            background: url(../images/gir_sprites.svg) -7px -737px/34px no-repeat;
+                                            z-index: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .gir_doc_filter{
+            .gir_doc_filter_block{
+                .buttons {
+                    padding: 20px 0 0 0 ;
+                    border-bottom: 1px solid #B2B2B2;
+                    @include media_query("769", "max") {    
+                       display: block
+                    }
+                  }
+                  
+                  .button {
+                    transition: all .2s ease-in-out;
+                    -webkit-appearance: none;
+                    font-family: inherit;
+                    appearance: none;
+                    background: none;
+                    cursor: pointer;
+                    padding: 10px;
+                    margin: 0 15px;
+                    outline: none;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 36px;
+                    text-transform: capitalize;
+                    color: #9B9B9B;
+                    @include media_query("769", "max") {
+                     font-size: 18px;
+                     display: block;
+                     margin: 0;
+                     padding-left: 0;
+                    }
+                  }
+                  
+                  .button:hover,
+                  .button.active {
+                    border-bottom: 3px solid var(--color-primary);
+                    color: var(--color-primary);
+                  }
+                  
+                  .grid {
+                    margin: 0 auto 80px;
+                    display: block;
+                    width: 100%;
+                  }
+                  
+                  .item {
+                      .gir_doc_item{
+                          display: flex;
+                          margin-top: 20px;
+                          .doc_img{
+                              margin-right: 20px;
+                              position: relative;
+                          }
+                          .doc_con{
+                              h2{
+                                font-weight: 500;
+                                font-size: 18px;
+                                line-height: 27px;
+                                text-transform: capitalize;
+                                color: #000000;
+                                margin-bottom: 20px;
+                              }
+                              h4{
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 24px;
+                                text-transform: capitalize;
+                                color: #000000;
+                                margin-bottom: 20px;
+                              }
+                              p{
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 24px;
+                                text-transform: capitalize;
+                                color: #000000;
+                                margin-bottom: 20px;
+                                a{
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    text-transform: capitalize;
+                                    color: var(--color-primary); 
+                                    padding-left: 5px;
+                                    position: relative;
+                                    padding-right: 15px;
+                                    &:after{
+                                        content: '';
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 0;
+                                        width: 10px;
+                                        height: 5px;
+                                        border-top: solid 5px var(--color-primary);
+                                        border-left: solid 5px transparent;
+                                        border-right: solid 5px transparent;
+                                    }
+                                }
+                              }
+                              .doc_list{
+                                  display: flex;
+                                  li{
+                                      a{
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        text-transform: capitalize;
+                                        color: #9B9B9B;
+                                        padding-left: 10px;
+
+                                      }
+                                      &:first-child{
+                                          a{
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            line-height: 24px;
+                                            text-transform: capitalize;
+                                            color: var(--color-primary);
+                                            padding-left: 20px;
+                                            position: relative;
+                                            padding-right: 20px;
+                                            border-right: 1px solid rgba(242, 131, 91, 0.6);
+                                            &:after{
+                                                content: '';
+                                                position: absolute;
+                                                top: 1px;
+                                                left: 0;
+                                                height: 20px;
+                                                width: 20px;
+                                                margin: 0 auto;
+                                                background: url(../images/gir_sprites.svg) -10px -894px/36px no-repeat;
+                                                z-index: 1;
+                                            }
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+                  
+                  .hide { display: none; }
+            }
+            
+            button{
+                &.gir_gen_read{
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 45px;
+                    margin: 30px  auto;
+                    text-transform: capitalize;
+                    color: var(--color-primary);
+                    position: relative;
+                    display: inherit;
+                    padding-right: 32px;
+                    border-bottom: 1px solid var(--color-primary);
+                    @include media_query("769", "max") {
+                     font-size: 18px;
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                        height: 30px;
+                        width: 26px;
+                        background: url(../images/gir_sprites.svg) -6px -134px/38px no-repeat;
+                        @include media_query("769", "max") {
+                            transform: scale(.8);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+

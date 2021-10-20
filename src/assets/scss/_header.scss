@@ -1,0 +1,409 @@
+header{
+    // Section: Navbar Menu
+    .navbar {
+        max-width: 100%;
+        color: var(--color-black);
+        background: var(--color-white);
+        box-shadow: var(--shadow-medium);
+        transition: all .5s ease-in-out;
+
+        &.fixed{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999999999;
+        }
+
+        .gir_nav_top{
+            border-bottom: 1px solid #E2E2E2;
+            .gir_container{
+                @include media_query("1550", "max") {
+                    padding-right: 0;
+                }
+                @include media_query("769", "max") {
+                    padding: 0;
+                }
+            }
+            .gir_wrapper{
+                @include flexbox();
+                @include align-items(center);
+                min-height: 70px;
+                @include media_query("769", "max") {        
+                    @include justify-content(center);
+                    min-height: 40px;
+                }
+
+                .gir_logo_main{
+                    @include flex-basis(50%);
+                    @include justify-content(flex-start);
+                    @include height_width(null, 50%);
+                    @include media_query("769", "max") {
+                        @include height_width(null, 100%);  
+                        @include justify-content(center);
+                        @include flex-basis(100%);
+                        display: none
+                    }
+                    a{
+                        @include flexbox();
+                        @include align-items(center);
+                        img{
+                            max-width: 100%
+                        }
+                        span{
+                            font-family: $font-Poppins-Bold;
+                            @include font-size(20);
+                            @include line-height(30);
+                            color: var(--color-primary);
+                            @include padding(null, null, null, 8px);
+                            @include text-transform(uppercase);
+                        }
+                    }
+                }
+
+                .gir_top_nav{ 
+                    @include flexbox();
+                    @include flex-basis(50%);
+                    @include justify-content(flex-end);
+                    @include height_width(null, 50%);
+                    @include media_query("769", "max") {
+                        @include flex-basis(100%);
+                    }
+
+                    .gir_lang{
+                        @include flexbox();
+                        @include justify-content(space-evenly);
+                        @include align-items(center);
+                        @include flex-basis(auto);
+                        @include height_width(null, 180px);
+                        @include padding(null, null, null, 40px);
+                        background: var(--color-primary);
+                        min-height: 70px;
+                        position: relative;
+                        @include media_query("769", "max") {
+                            min-height: 40px;
+                        }
+
+                        &::before{
+                            @include positioning(absolute, null, null, null, 15px);
+                            @include height_width(30px, 30px);
+                            content: '';
+                            background: url(../images/gir_sprites.svg) -9px -23px/50px no-repeat;
+                        }
+
+                        ul{
+                            position: relative;
+                            .gir_lang_item{
+                                @include flexbox();
+                                @include justify-content(space-between);
+                                @include align-items(center);
+                                @include font-size(16);
+                                @include line-height(25);
+                                @include padding(10px, 0, 10px, 0);
+                                @include text-transform(capitalize);
+                                @include cursor(pointer);
+                                color: var(--color-white);
+                                font-family: $font-Poppins-Medium;
+                                span{
+                                    @include height_width(18px, 18px);
+                                    background: url(../images/gir_sprites.svg) -9px -192px/37px no-repeat;;
+                                }
+                                ul{
+                                    @include display(none);
+                                    li {
+                                        position: relative;
+                                        @include text-align(left);
+                                        background: transparent;
+                                        @include padding(15px, 15px, 0, 15px);
+                                        z-index: 2;
+                                        @include font-size(15);
+                                        color: var(--color-black-2);
+                                        &:last-of-type {
+                                            padding-bottom: 15px;
+                                        }
+                                        span {
+                                            padding-left: 5px;
+                                            &:hover, &.active {
+                                                color: var(--color-primary);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    ul{
+                                    @include positioning(absolute, 42px, -15px, null, null);
+                                    @include display(block);
+                                    @include height_width(null, 120px);
+                                    background: var(--color-white);
+                                    padding-top: 0px;
+                                    z-index: 1;
+                                    border-radius:5px;
+                                    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+                                    }
+                                    .triangle {
+                                        @include positioning(absolute, 29px, -8px, null, null);
+                                        z-index: 10;
+                                        @include height_width(14px, 30px);
+                                        @include overflow(hidden);
+                                        background: transparent;
+                                        &:after {
+                                            @include display(block);
+                                            @include height_width(15px, 15px);
+                                            content: '';
+                                            z-index: 20;
+                                            transform: rotate(45deg) translateY(0px) translatex(10px);
+                                            background: var(--color-white);
+                                            border-radius: 2px 0px 0px 0px;
+                                            box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+                                        }
+                                    } 
+                                }
+                            }
+                        }  
+                    }
+                    .gir_search{
+                        @include justify-content(flex-end);
+                        @include flex-basis(50%);
+                        @include height_width(null, 50%);
+                        min-height: 70px;
+                        @include media_query("769", "max") {
+                            min-height: 40px;
+                        }
+
+                        form{
+                            @include flexbox();
+                            @include align-items(center);
+                            min-height: 70px;
+                            @include media_query("769", "max") {
+                                min-height: 40px;
+                            }
+
+                            .gir_search-input{
+                                @include flex-basis(90%);
+                                input{
+                                    border: none;
+                                    @include margin(null, 10px, null, 20px);
+                                    @include font-size(16);
+                                    @include line-height(25);
+                                    @include text-transform(capitalize);
+                                    font-family: $font-Poppins-Medium;
+                                    color: var(--color-primary);
+                                    min-height: 30px;
+                                    width: 100%;
+                                    &::placeholder{
+                                        color: var(--color-primary);
+                                    }
+                                    &:focus{
+                                        border: none;
+                                        outline: none;
+                                    }
+                                    
+                                }
+                            }
+
+                            .gir_search_submit{
+                                @include height_width(40px, 40px);
+                                position: relative;
+                                span{
+                                    @include flexbox();
+                                    @include align-items(center);
+                                    @include justify-content(center);
+                                    @include height_width(20px, 20px);
+                                    margin: 0 auto;
+                                    background: url(../images/gir_sprites.svg) -7px -65px/33px no-repeat;
+                                    z-index: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .gir_nav_bottom{
+
+            .gir_wrapper {
+                @include flexbox();
+                @include flex-direction(row);
+                @include justify-content(flex-start);
+                @include flex-wrap(wrap);
+                @include align-items(center);
+                @include height_width(auto, 100%);
+                @include margin(0, auto, 0, auto);
+                min-height: 54px;
+                @include media_query("769", "max") {
+                    @include justify-content(space-between);
+                }
+            }
+
+            .gir_logo {
+                @include display(none);
+                @include media_query("769", "max") {
+                    @include flexbox();
+                    a{
+                        @include flexbox();
+                        @include align-items(center);
+                    }
+                    span{
+                            font-family: $font-Poppins-Bold;
+                            @include font-size(16);
+                            @include line-height(30);
+                            color: var(--color-primary);
+                            @include padding(null, null, null, 8px);
+                            @include text-transform(uppercase);
+                    }
+                }
+                &-link {
+                    font-family: inherit;
+                    font-size: 1.75rem;
+                    font-weight: 700;
+                    line-height: inherit;
+                    border: none;
+                    outline: none;
+                    color: var(--color-indigo);
+                    text-transform: uppercase;
+                    text-rendering: optimizeLegibility;
+                }
+            }
+
+            .gir_burger {
+                position: relative;
+                display: none;
+                cursor: pointer;
+                width: 2rem;
+                height: 1rem;
+                border: none;
+                outline: none;
+                opacity: 0;
+                visibility: hidden;
+                background: none;
+                transform: rotate(0deg);
+                transition: 0.35s ease-in-out;
+
+                &_line {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    left: 0;
+                    border: none;
+                    outline: none;
+                    opacity: 1;
+                    border-radius: 0.25rem;
+                    background: var(--color-black);
+                    transform: rotate(0deg);
+                    transition: 0.25s ease-in-out;
+
+                    &:nth-child(1) {
+                        top: 0;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        top: 0.5rem;
+                    }
+
+                    &:nth-child(4) {
+                        top: 1rem;
+                    }
+                }
+
+                &.active {
+                    .gir_burger_line {
+                        &:nth-child(1),
+                        &:nth-child(4) {
+                            top: 1.25rem;
+                            width: 0%;
+                            left: 50%;
+                        }
+
+                        &:nth-child(2) {
+                            transform: rotate(45deg);
+                        }
+
+                        &:nth-child(3) {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+
+            .gir_menu {
+                width: 100%;
+                &_inner {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                &_link {
+                    font-family: $font-Poppins-Medium;
+                    font-size: 1rem;
+                    line-height: inherit;
+                    border: none;
+                    color: var(--color-black);
+                    text-transform: capitalize;
+                    text-rendering: optimizeLegibility;
+                    transition: all 0.35s ease-in-out;
+                    padding: 15px 0;
+
+                    &.active,
+                    &:hover {
+                        border: none;
+                        outline: none;
+                        color: var(--color-primary);
+                    }
+                }
+            }
+
+        }
+        
+    }
+    // Section: Responsive Media Query
+    @media only screen and (max-width: 768px) {
+        .navbar {
+            .gir_nav_bottom{
+                .gir_burger {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .gir_menu {
+                    width: 100%;
+                    height: auto;
+                    padding: 0 20px;
+                    opacity: 0;
+                    visibility: hidden;
+                    overflow: hidden;
+                    transition: all 0.35s ease;
+                    position: absolute;
+                    top: 105px;
+                    left: -500%;
+                    background: var(--color-white);
+                    box-shadow: 0px 0px 2px 2px #dddddd;
+                    z-index: 11;
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+                        left: 0;
+                    }
+
+                    &_inner {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 0.75rem;
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+
+
+    

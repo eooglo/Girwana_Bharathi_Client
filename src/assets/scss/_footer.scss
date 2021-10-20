@@ -1,0 +1,122 @@
+footer{
+    .gir_footer{
+        background: var(--color-primary);
+        @include padding(40px, 0, 100px, 0); 
+        @include media_query("769", "max"){
+            @include padding(10px, 0, 10px, 0); 
+        }
+        .gir_wrapper{
+            @include flexbox();
+            @include justify-content(space-between);
+            @include media_query("769", "max"){
+                @include display(block);;
+            }
+            .gir_foot_sec{
+
+                &.gir_foot_one{
+                    @include flex-basis(25%);
+                    @include media_query("769", "max"){
+                        padding-bottom: 40px;
+                    }
+                    .gir_foot_social{
+                        max-width: 220px;
+                        ul{
+                            @include flexbox();
+                            @include justify-content(space-evenly);
+                            width: 64%;
+                            margin: 0 auto;
+                            li{
+                                @include height_width(30px, 30px);
+                                span{
+                                    @include height_width(30px, 30px);
+                                    @include display(block);
+                                    background: url(../images/gir_sprites.svg) -3px -233px/35px no-repeat;
+                                }
+                                &:nth-child(2){
+                                    span{
+                                        background: url(../images/gir_sprites.svg) -3px -296px/35px no-repeat;
+                                    }
+                                }
+                                &:nth-child(3){
+                                    span{
+                                        background: url(../images/gir_sprites.svg) -3px -361px/35px no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.gir_foot_two{
+                    @include flex-basis(30%);
+                }
+                &.gir_foot_three{
+                    @include flex-basis(17%);
+                }
+                &.gir_foot_four{
+                    @include flex-basis(17%);
+                }
+                &.gir_foot_five{
+                    @include flex-basis(10%);
+                }
+                .gir_foot_menu{
+                    .gir_foot_title{
+                        font-family: $font-Poppins-Medium;
+                        @include font-size(18);
+                        @include line-height(27);
+                        @include text-transform(capitalize);
+                        color: var(--color-white);
+                        padding-bottom: 30px;
+                    }
+                    p{
+                        font-family: $font-Poppins-Regular;
+                        @include font-size(14);
+                        @include line-height(20);
+                        color: var(--color-white);
+                        width: 70%;
+                    }
+                    ul{
+                        li{
+                            a{ 
+                                font-family: $font-Poppins-Regular;
+                                @include font-size(14);
+                                @include line-height(20);
+                                color: var(--color-white);
+                            }
+                        }
+                    }
+                }
+                
+                @include media_query("769", "max"){
+                    @include display(block);
+                    flex-basis: 100% !important;
+                    .gir_foot_menu{
+                        padding-bottom: 30px;
+                        .gir_foot_title{
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gir_copy_rights{
+        background: var(--color-white);
+        .gir_wrapper{
+            @include flexbox();
+            @include justify-content(space-between);
+            @include align-items(center);
+            padding: 10px 0;
+            @include media_query("769", "max"){
+                @include display(block);
+            }
+
+            .gir_copy_text,.gir_develop{
+                font-family: $font-Poppins-Medium;
+                @include font-size(14);
+                @include line-height(20);
+                color: var(--color-black-2);
+                @include text-transform(capitalize);
+            }
+        }
+    }
+}
